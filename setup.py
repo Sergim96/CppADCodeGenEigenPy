@@ -7,7 +7,7 @@ from pybind11.setup_helpers import Pybind11Extension, build_ext
 with open("README.md") as f:
     long_description = f.read()
 
-with open("VERSION") as f:
+with open("VERSION.txt") as f:
     version = f.read().strip()
 
 
@@ -17,7 +17,7 @@ ext_modules = [
     Pybind11Extension(
         "CppADCodeGenEigenPy",
         ["src/bindings.cpp"],
-        include_dirs=["include", "/usr/include/eigen3", "/usr/local/include/eigen3"],
+        include_dirs=["include", "/usr/include/eigen3", "/usr/local/include/eigen3", "/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3"],
     ),
 ]
 
